@@ -1,6 +1,6 @@
 import os
 import sys
 
-module_dir = '../src'
+MODULE_DIR = '../src'
 
-sys.path.append(os.path.relpath(module_dir))
+sys.path.append(os.path.relpath(MODULE_DIR))
