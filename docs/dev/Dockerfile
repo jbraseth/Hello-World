@@ -9,7 +9,7 @@ RUN apt-get update && \
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.13 1
 
 # Copy and install Python requirements
-COPY python-requirements.txt /tmp/
+COPY docs/dev/python-requirements.txt /tmp/
 RUN pip3 install --no-cache-dir -r /tmp/python-requirements.txt
 
 # Set the working directory
