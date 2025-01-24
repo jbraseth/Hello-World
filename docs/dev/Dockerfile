@@ -1,9 +1,7 @@
 FROM ubuntu:latest
 
 # Install Python 3.13 and other dependencies
-RUN apt-get update && \
-    apt-get install -y software-properties-common && \
-    add-apt-repository universe && \
+RUN echo "deb http://archive.ubuntu.com/ubuntu plucky main universe" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y python3.13 python3-pip && \
     rm -rf /var/lib/apt/lists/*
