@@ -1,3 +1,7 @@
 #! /bin/bash
+source _helpers.sh
 
-pylint src/** tests/**
+DOCKER_CMD=$(get_docker_cmd $1)
+shift
+
+$DOCKER_CMD "pylint src/** tests/**"
